@@ -191,7 +191,35 @@ class UserController {
       .catch((err) => console.log(err));
 
 // write algorithm for selecting the policies which fit for user among state Policy given in result2 and update result2
+      let temp = [];
 
+      for(var i=0; i<result2length(); i++){
+        var i1 = result2[i].income.split("-");
+                            var i2 = result2[i].age.split("-");
+                            var i3 = result2[i].qualification.split("-");
+                            var i4 = result2[i].caste.split("/");
+                            function checkCaste(a){
+                                for(var i = 0; i<i4.length; i++){
+                                    if(i4[i] == "none"){
+                                        continue;
+                                    }else if(i4[i] == a){
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            }
+
+                        if((result2[i].income == "none" || ((i1[0] <= result[0].income) && (i1[1] >= result[0].income)))
+                        &&  (result2[i].occupation =="none" || result2[i].occupation === result[0].occupation)
+                        &&  (result2[i].qualification == "none" || ((i3[0]<= result[0].qualification) && (i3[1] >= result[0].qualification)))
+                        &&  (result2[i].gender == "none" || result2[i].gender === result[0].gender)
+                        &&  (result2[i].caste == "none" ||(checkCaste(result[0].caste)))
+                        &&  (result2[i].age == "none" || ((i2[0] <= result[0].age) && (i2[1] >= result[0].age)))){
+                          temp.push(result2[i]);
+                        }
+      }
+
+      result2 = temp;
 
 
 
@@ -222,7 +250,35 @@ class UserController {
 
 
 // write algorithm for selecting the policies which fit for user among state Policy given in result2 and update result2
+      let temp = [];
+      for(var i=0; i<result2.length(); i++){
+        var i1 = result2[i].income.split("-");
+                            var i2 = result2[i].age.split("-");
+                            var i3 = result2[i].qualification.split("-");
+                            var i4 = result2[i].caste.split("/");
+                            function checkCaste(a){
+                                for(var i = 0; i<i4.length; i++){
+                                    if(i4[i] == "none"){
+                                        continue;
+                                    }else if(i4[i] == a){
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            }
 
+                        if((result2[i].income == "none" || ((i1[0] <= result[0].income) && (i1[1] >= result[0].income)))
+                        &&  (result2[i].occupation =="none" || result2[i].occupation === result[0].occupation)
+                        &&  (result2[i].qualification == "none" || ((i3[0]<= result[0].qualification) && (i3[1] >= result[0].qualification)))
+                        &&  (result2[i].gender == "none" || result2[i].gender === result[0].gender)
+                        &&  (result2[i].caste == "none" ||(checkCaste(result[0].caste)))
+                        &&  (result2[i].age == "none" || ((i2[0] <= result[0].age) && (i2[1] >= result[0].age)))
+                        &&  (result2[i].state == result[0].state)){
+                          temp.push(result2[i]);
+                        }
+      }
+
+      result2 = temp;
 
 
 
