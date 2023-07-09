@@ -210,7 +210,7 @@ class UserController {
                             }
 
                         if((result2[i].income == "none" || ((i1[0] <= result[0].income) && (i1[1] >= result[0].income)))
-                        &&  (result2[i].occupation =="none" || result2[i].occupation === result[0].occupation)
+                        &&  (result2[i].occupassion =="none" || result2[i].occupation === result[0].occupation)
                         &&  (result2[i].qualification == "none" || ((i3[0]<= result[0].qualification) && (i3[1] >= result[0].qualification)))
                         &&  (result2[i].gender == "none" || result2[i].gender === result[0].gender)
                         &&  (result2[i].caste == "none" ||(checkCaste(result[0].caste)))
@@ -268,7 +268,7 @@ class UserController {
                             }
 
                         if((result2[i].income == "none" || ((i1[0] <= result[0].income) && (i1[1] >= result[0].income)))
-                        &&  (result2[i].occupation =="none" || result2[i].occupation === result[0].occupation)
+                        &&  (result2[i].occupassion =="none" || result2[i].occupation === result[0].occupation)
                         &&  (result2[i].qualification == "none" || ((i3[0]<= result[0].qualification) && (i3[1] >= result[0].qualification)))
                         &&  (result2[i].gender == "none" || result2[i].gender === result[0].gender)
                         &&  (result2[i].caste == "none" ||(checkCaste(result[0].caste)))
