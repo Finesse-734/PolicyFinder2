@@ -45,8 +45,8 @@ npm run start
 ```
 The application will be accessible at http://localhost:3000.
 
-Usage
-Open a web browser and navigate to http://localhost:3000.
-Register a new user account or log in using existing credentials.
-Fill in your personal details such as occupation, age, gender, caste, and income.
-Submit the form to receive policy recommendations based on your data.
+## Usage
+-Open a web browser and navigate to http://localhost:3000.
+-Register a new user account or log in using existing credentials.
+-Fill in your personal details such as occupation, age, gender, caste, and income.
+-Submit the form to receive policy recommendations based on your data.
