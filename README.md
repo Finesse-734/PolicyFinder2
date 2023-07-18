@@ -34,8 +34,14 @@ npm install
 ```
 4.Create a .env file in the project's root directory and specify the following environment variables:
    ```shell
+PORT = <port no.>
 MONGODB_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
+EMAIL_HOST = <your-host-email>
+EMAIL_PORT = 587
+EMAIL_USER = <your email_id>
+EMAIL_PASS = <email_password>
+EMAIL_FROM = <your email_id>
 ```
 Replace <your-mongodb-uri> with the connection URI for your MongoDB database and <your-jwt-secret> with a secret key for JWT token encryption.
 
@@ -43,10 +49,10 @@ Start the application:
    ```shell
 npm run start
 ```
-The application will be accessible at http://localhost:3000.
+The application will be accessible at http://localhost:PORT.
 
 ## Usage
--Open a web browser and navigate to http://localhost:3000.
+-Open a web browser and navigate to http://localhost:PORT.
 -Register a new user account or log in using existing credentials.
 -Fill in your personal details such as occupation, age, gender, caste, and income.
 -Submit the form to receive policy recommendations based on your data.
