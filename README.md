@@ -22,26 +22,27 @@ Before running the PolicyFinder application, ensure you have the following prere
 
    ```shell
    git clone https://github.com/your-username/policyfinder.git
+   ```
 
 2.Change to the project's root directory:
    ```shell
 cd policyfinder
-
+```
 3.Install the dependencies:
    ```shell
 npm install
-
+```
 4.Create a .env file in the project's root directory and specify the following environment variables:
    ```shell
 MONGODB_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
-
+```
 Replace <your-mongodb-uri> with the connection URI for your MongoDB database and <your-jwt-secret> with a secret key for JWT token encryption.
 
 Start the application:
    ```shell
 npm run start
-
+```
 The application will be accessible at http://localhost:3000.
 
 Usage
